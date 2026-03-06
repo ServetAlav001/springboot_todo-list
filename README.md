@@ -11,8 +11,8 @@ Bu proje, modern Java teknolojileri kullanılarak geliştirilmiş, görevleri (t
 
 ## 🛠️ Kullanılan Teknolojiler
 
-* **Java 17+**
-* **Spring Boot 3.x** (Web, Data JPA)
+* **Java 25
+* **Spring Boot 4.0.3 (Web, Data JPA)
 * **Database:** H2 (Geliştirme aşaması için) / MySQL-PostgreSQL uyumlu
 * **Build Tool:** Maven
 * **Documentation:** Swagger / OpenAPI
@@ -48,3 +48,4 @@ Bu proje, modern Java teknolojileri kullanılarak geliştirilmiş, görevleri (t
 * `model/`: Veritabanı tablolarını temsil eden Entity sınıfları.
 * `repository/`: Veritabanı sorgularını yöneten JpaRepository arayüzleri.
 * `controller/`: HTTP isteklerini karşılayan ve yanıt dönen REST kontrolcüleri.
+
