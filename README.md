@@ -50,3 +50,4 @@ Bu proje, modern Java teknolojileri kullanılarak geliştirilmiş, görevleri (t
 * `controller/`: HTTP isteklerini karşılayan ve yanıt dönen REST kontrolcüleri.
 
 
+
