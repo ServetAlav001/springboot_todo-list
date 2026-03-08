@@ -117,3 +117,24 @@ h1 {
     margin-right: 10px;
     flex-shrink: 0;
 }
+
+.tab-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-area button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    font-size: 14px;
+}
+
+.tab-active {
+    background-color: #4a90e2 !important;
+    color: white;
+}

@@ -3,14 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
     <title>To-Do List</title>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <h1>Görev Listesi</h1>
+
+<!-- Giriş/Kayıt Ekranı -->
+<div class="container" id="auth-container">
+    <h1>To-Do List</h1>
+
+    <div class="tab-area">
+        <button onclick="showLogin()" id="tab-login" class="tab-active">Giriş Yap</button>
+        <button onclick="showRegister()" id="tab-register">Kayıt Ol</button>
+    </div>
+
+    <!-- Giriş Formu -->
+    <div id="login-form" class="form-area">
+        <input type="text" id="login-username" placeholder="Kullanıcı adı">
+        <input type="password" id="login-password" placeholder="Şifre">
+        <div id="login-error" style="color: red; display: none;"></div>
+        <button onclick="login()">Giriş Yap</button>
+    </div>
+
+    <!-- Kayıt Formu -->
+    <div id="register-form" class="form-area" style="display: none;">
+        <input type="text" id="register-username" placeholder="Kullanıcı adı">
+        <input type="email" id="register-email" placeholder="Email">
+        <input type="password" id="register-password" placeholder="Şifre">
+        <div id="register-error" style="color: red; display: none;"></div>
+        <button onclick="register()">Kayıt Ol</button>
+    </div>
+</div>
+
+<!-- Görev Ekranı -->
+<div class="container" id="task-container" style="display: none;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <h1>Görev Listesi</h1>
+        <button class="btn-delete" onclick="logout()">Çıkış</button>
+    </div>
 
     <div class="form-area">
         <input type="text" id="baslik" placeholder="Görev başlığı">
@@ -18,8 +48,10 @@
         <div id="error-mesaj" style="color: red; display: none;"></div>
         <button onclick="createTask()">Ekle</button>
     </div>
+
     <ul id="task-list"></ul>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
