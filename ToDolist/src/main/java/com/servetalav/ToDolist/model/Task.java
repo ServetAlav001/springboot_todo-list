@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import javax.annotation.processing.Generated;
 
@@ -13,8 +15,11 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "baslık bos olamaz!")
 
     private String baslik;
+    @NotBlank(message = "aciklama bos olamaz!")
+
     private String aciklama;
     private boolean tamamlandi_mi;
 
